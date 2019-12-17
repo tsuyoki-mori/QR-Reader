@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR スキャンz</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>    
+        <link rel="stylesheet" tyle="text/css" href="style.css">  
+  </head>
+  <body>
+<!--
+        <video id="video" muted autoplay loop>
+        </video>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10 qr-video">
+      <video id="preview"></video>
+    </div>
+    <div class="col-1">
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-6" id="text-input"><input class="qr-input" id="input-1" type="text"></div>
+        <div class="col-6" id="text-input"><input class="qr-input" id="input-2" type="text"></div>
+  </div>
+  <div class="row result">
+    <div class="col-3 centerpos"><button></button></div>
+    <div class="col-6 centerpos" id="text-result">ああaあ</div>
+    <div class="col-3 centerpos"><button type="button" id="clear-button" class="btn btn-primary">消去</button></div>
+</div>
+</div>
+<audio id="sound-file" preload="auto">
+    <source src="https://game.lemonkobo.com/kodemari-gourmet-run/assets/audio/piron3.wav" type="audio/wav">
+</audio>
+<script type="text/javascript" src="qrRead.js">    </script>
+<script type="text/javascript">
+</script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+body, html {
+  /*
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+  */
+  background-color: #120234;
+}
+
+#text-input {
+  text-align: center;
+  margin: 0 auto;
+}
+#text-result {
+  font-size: large;
+  color: #fff;
+}
+
+.qr-input {
+  width: 100%;
+}
+
+.qr-video {
+  text-align: center;
+  margin: 0 auto;
+  
+  /*
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  */
+}
+
+#preview {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*
+.wrapper {
+  height: 100%;
+  position: relative; 
+  width: 100%;
+}
+
+
+*/
