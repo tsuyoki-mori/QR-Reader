@@ -1,5 +1,6 @@
 $(function() {
   let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
+  let resultTxt = [];
   scanner.addListener('scan', function (content) {
     document.getElementById( 'sound-file' ).play();
     if ($('#input-1').val() == "") {
@@ -10,7 +11,10 @@ $(function() {
 
       if ($('#input-1').val() == $('#input-2').val()) {
         $('#text-result').text("QRが一致しました")
-        .css("color", "black");
+        .css("color", "white");
+        resultTxt.push(content);
+        console.log(resultTxt.join('<br>'));
+        $('.result-codes').html(resultTxt.join('<br>'));
       }
       else {
         $('#text-result').text("QRが一致してません")
@@ -37,6 +41,13 @@ $(function() {
   $('#clear-button').on('click', function() {
     $('#input-1').val("");
     $('#input-2').val("");
+    $('#text-result').text("QRが読み込めます")
+  });
+  $('#save-button').on('click', function() {
+    var blob = new Blob([ resultTxt.join('') ], { "type" : "text/plain" });
+    window.URL = window.URL || window.webkitURL;
+    console.log("save");
+    $(this).attr("href", window.URL.createObjectURL(blob));
   });
 
   

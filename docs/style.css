@@ -20,6 +20,27 @@ body, html {
   width: 100%;
 }
 
+/*
+.result {
+}
+*/
+#save-button {
+  background-color: #fff;
+}
+
+.result-codes {
+  color: #cdd;
+  padding: 4px;
+  font-size:small;
+}
+
+.centerpos {
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
 .qr-video {
   text-align: center;
   margin: 0 auto;

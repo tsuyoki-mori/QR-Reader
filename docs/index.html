@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QR スキャンz</title>
+    <title>QR スキャン</title>
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -23,23 +23,26 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-1">
+    <div class="col-2">
     </div>
-    <div class="col-10 qr-video">
+    <div class="col-8 qr-video">
       <video id="preview"></video>
     </div>
-    <div class="col-1">
+    <div class="col-2">
     </div>
   </div>
   <div class="row">
-        <div class="col-6" id="text-input"><input class="qr-input" id="input-1" type="text"></div>
-        <div class="col-6" id="text-input"><input class="qr-input" id="input-2" type="text"></div>
+        <div class="col-6" id="text-input"><input class="qr-input" id="input-1" type="text" readonly></div>
+        <div class="col-6" id="text-input"><input class="qr-input" id="input-2" type="text" readonly></div>
   </div>
   <div class="row result">
-    <div class="col-3 centerpos"><button></button></div>
-    <div class="col-6 centerpos" id="text-result">ああaあ</div>
-    <div class="col-3 centerpos"><button type="button" id="clear-button" class="btn btn-primary">消去</button></div>
-</div>
+    <div class="col-4 centerpos"><a id="save-button" download type="button" class="btn btn-default btn-lg">データ保存</a></button></div>
+    <div class="col-4 centerpos" id="text-result">QRが読み込めます</div>
+    <div class="col-4 centerpos"><button type="button" id="clear-button" class="btn btn-primary btn-lg">QR読み直し</button></div>
+  </div>
+  <div class="row result-text-container">
+    <div class="col-12 result-codes"></div>
+  </div>
 </div>
 <audio id="sound-file" preload="auto">
     <source src="https://game.lemonkobo.com/kodemari-gourmet-run/assets/audio/piron3.wav" type="audio/wav">
